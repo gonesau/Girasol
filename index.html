@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Girasol</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <button id="startButton" class="custom-button">Dibujar</button>
+    </div>
+   
+    <div id="header">
+      <p id="headerText">Aquí está tu flor amarilla mi niña wapa <br> te mereces lo mejor ♥ </p>
+    </div>
+
+    <div id="girasol-container">
+      <div id="girasol">
+        <div class="centro"></div>
+        <div class="petalos">
+
+          <script>
+            for (let i = 0; i < 25; i++) {
+              const petalo = document.createElement("div");
+              petalo.className = "petalo";
+              petalo.style.transform = `rotate(${
+                i * (360 / 25)
+              }deg) translateY(-50px)`;
+              document.querySelector(".petalos").appendChild(petalo);
+            }
+          </script>
+        </div>
+        <div class="hojas">
+          <div class="hoja hoja1"></div>
+          <div class="hoja hoja2"></div>
+        </div>
+        <div class="tallo"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
